@@ -6,9 +6,21 @@ const toggleButtons = document.querySelectorAll('.toggle-answer');
 
 toggleButtons.forEach(button => {
     button.addEventListener('click', function () {
-        const answer = this.closest('.faq-item').querySelector('.answer');
+        toggleButtons.forEach(btn => {
+            const answer = btn.closest('.faq-item').querySelector('.answer');
+            const faqItem = btn.closest('.faq-item');
 
+            if (btn !== this) {
+                answer.classList.remove('show');
+                faqItem.classList.remove('active');
+                btn.src = './img/add-logo.svg';
+            }
+        });
+
+        const answer = this.closest('.faq-item').querySelector('.answer');
+        const faqItem = this.closest('.faq-item');
         answer.classList.toggle('show');
+        faqItem.classList.toggle('active');
 
         if (answer.classList.contains('show')) {
             this.src = './img/close-logo.svg';
@@ -18,16 +30,6 @@ toggleButtons.forEach(button => {
     });
 });
 
-
-
-
-document.querySelectorAll('.toggle-answer').forEach((toggle) => {
-    toggle.addEventListener('click', function () {
-        const faqItem = this.closest('.faq-item');
-        faqItem.classList.toggle('active');
-        this.classList.toggle('open');
-    });
-});
 
 
 
@@ -48,6 +50,12 @@ function toggleMenu() {
     const navContainer = document.getElementById("nav-container");
     navContainer.classList.toggle("active");
 }
+function CloseMenu() {
+    const navContainer2 = document.getElementById("nav-container")
+    navContainer2.classList.toggle("active")
+}
+
+
 
 
 // document.addEventListener('DOMContentLoaded', function () {
@@ -73,11 +81,21 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleTitles.forEach((title) => {
         title.addEventListener("click", function () {
             const description = this.nextElementSibling;
-            if (description.classList.contains("hidden")) {
-                description.classList.remove("hidden");
-            } else {
-                description.classList.add("hidden");
+
+            const isVisible = !description.classList.contains("hidden");
+
+            toggleTitles.forEach((otherTitle) => {
+                const otherDescription = otherTitle.nextElementSibling;
+                if (!otherDescription.classList.contains("hidden")) {
+                    otherDescription.classList.add("hidden");
+                }
+            });
+
+            if (!isVisible) {
+                description.classList.toggle("hidden");
             }
         });
     });
 });
+
+

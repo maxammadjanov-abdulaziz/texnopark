@@ -8,6 +8,13 @@
 
 @font-face {
     font-family: 'Inter';
+    src: url('./font/Inter_24pt-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterBold';
     src: url('./font/Inter_24pt-Bold.ttf') format('woff'),
         url('./font/Inter_24pt-Bold.ttf') format('truetype');
     font-weight: bold;
@@ -145,6 +152,11 @@ header .language .lang-btn {
     background-color: #141c27;
 }
 
+.nav-container {
+    display: flex;
+    /* flex-direction: column; */
+}
+
 
 
 /* Main section */
@@ -217,13 +229,32 @@ header .language .lang-btn {
 }
 
 /* Основные стили для навигации */
-.nav-container {
-    display: flex;
+.nav-container-p {
+    margin-left: auto;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-container-p {
+    display: none;
+}
+
+.nav-container.active {
+    display: block;
+    /* Показать меню, когда добавлен класс active */
 }
 
 @media (max-width: 1090px) {
     .burger-menu {
         display: block;
+    }
+
+    .nav-container-p {
+        display: block;
+    }
+
+    .nav-container {
+        display: none;
     }
 
     /* Скрываем меню на мобильных устройствах */
@@ -237,14 +268,21 @@ header .language .lang-btn {
     /* Показываем меню, если добавлен класс active */
     .nav-container.active {
         display: flex;
-        position: absolute;
-        top: 60px;
+        position: fixed;
+        z-index: 99;
+        top: 0;
         /* Расположите под логотипом */
         left: 0;
         width: 100%;
+        height: 100%;
         background-color: #0D1117;
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -429,7 +467,7 @@ header .language .lang-btn {
 
 @media (max-width: 1090px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2rem !important;
     }
 
     p {
@@ -1065,16 +1103,17 @@ header .language .lang-btn {
 }
 
 .information p {
-    height: 72px;
-    opacity: 700%;
+    /* height: 72px; */
+    /* opacity: 700%; */
     font-family: 'Inter';
     font-weight: 300;
+    color: gray;
     font-size: 16px;
     line-height: 24px;
 }
 
 .faq-question {
-    font-family: 'Inter';
+    font-family: 'InterBold';
     font-weight: 700;
     font-size: 24px;
     line-height: 29.05px;
