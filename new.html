@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<div class="stars">
+    <header>
+        <div class="stylesde texnopark-container">
+
+            <div class="logo">
+                <a href="./index.html"><img src="./img/Union.svg" alt="Texnopark Logo"></a>
+                <a href="./index.html">
+                    <p>Geologiya, metallurgiya va misni qayta ishlash sanoatini rivojlantirish loyiha ofisi</p>
+                </a>
+            </div>
+
+            <button class="burger-menu" style="color: white;" onclick="toggleMenu()">&#9776;</button>
+
+            <div id="nav-container" class="nav-container">
+                <p class="nav-container-p" onclick="toggleMenu()">&times;</p>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#about">Biz haqimizda</a></li>
+                        <li><a href="#products">Faoliyat</a></li>
+                        <li><a href="./new.html">Yangiliklar</a></li>
+                        <li><a href="#contact">A'zolik</a></li>
+                        <li><a href="#contact">Ochiq ma'lumotlar</a></li>
+                        <li><a href="#contact">Bog'lanish</a></li>
+                    </ul>
+                </nav>
+
+                <div class="language">
+                    <button class="lang-btn-2">
+                        <img class="language-logo" src="./img/vector-increase.svg" alt="">USD | 12703.52 uzs
+                    </button>
+                    <button class="lang-btn" onclick="openModal()">Kirish</button>
+                </div>
+            </div>
+    </header>
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+    <div class="modal" id="loginModal">
+        <img src="./img/logos.svg" alt="Logo" style="width: 50px;">
+        <p>Geologiya, metallurgiya va misni qayta ishlash sanoatini rivojlantirish loyiha ofisi</p>
+        <label for="login">Login</label>
+        <input type="text" id="login" placeholder="Loginni kiriting"><br>
+        <label for="password">Parol</label>
+        <input type="password" id="password" placeholder="Parolni kiriting"><br>
+        <button class="close-btn" onclick="submitLogin()">Jo’natish</button>
+    </div>
+
+    <!-- <section class="uls">
+    <div class="texnopark-container">
+        <img src="" alt="">
+        <p style="color: red;
+        padding-top: 40px;"><span>Bosh sahifa</span> / Yangiliklar</p>
+    </div>
+</section> -->
+
+
+
+
+    <section class="news news-nwe">
+        <div class="texnopark-container texnopark1">
+            <img src="./img/Home Angle 2.svg" alt="">
+            <p class="abouttt"><span style="color: gray;">Bosh sahifa</span> / Yangiliklar</p>
+        </div>
+        <!-- <hr style="color: gray; border: 0.1;"> -->
+
+        <div class="texnopark-container">
+
+            <h2>Yangiliklar</h2>
+            <div class="news-items">
+                <div class="news-item">
+                    <img src="./img/news1.svg" alt="News 1">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./img/news2.svg" alt="News 2">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./img/news.3.svg" alt="News 3">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./img/news.3.svg" alt="News 3">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./img/news.3.svg" alt="News 3">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./img/news.3.svg" alt="News 3">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./img/news.3.svg" alt="News 3">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./img/news.3.svg" alt="News 3">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./img/news.3.svg" alt="News 3">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./img/news.3.svg" alt="News 3">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./img/news.3.svg" alt="News 3">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./img/news.3.svg" alt="News 3">
+                    <div class="news-item-div">
+                        <h3 class="toggle-news">
+                            Arxiv ishlarini yangi bosqichga olib chiqish maqsadida chet eldan yangi texnologiyalar olib
+                            kelindi!
+                        </h3>
+                        <div>
+                            <p>
+                                Erat amet consectetur pellentesque suspendisse ultricies. Orci phasellus nisi morbi
+                                quisque
+                                nulla
+                                mi feugiat. Risus vel eget viverra lorem. Volutpat pellentesque senectus lacus orci. Non
+                                volutpat eget faucibus luctus. Texnologiyalarni joriy etish va ulardan samarali
+                                foydalanish
+                                juda muhimdir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="button" id="duplicate-button">Bo’sh ish o’rinlari</button>
+        </div>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="footer">
+    <div class="texnopark-container">
+        <div class="footer-box">
+            <div class="footer-box2">
+                <div class="texnopark-info">
+                    <h1>Texnopark</h1>
+
+                    <p>Biznesingizni jahon miqyosidagi nutq va sohaga mos til modellari bilan rivojlantiring. Oson
+                        integratsiya.
+                        Barcha biznes uchun mos. Dasturchilar uchun qulay.</p>
+                </div>
+                <div class="box-ul">
+                    <ul>
+                        <h3>Bo'limlar</h3>
+                        <li><a href="#">Biz haqimizda</a> </li>
+                        <li><a href="#">Faoliyat</a> </li>
+                        <li><a href="#">Yangiliklar</a> </li>
+                        <li><a href="#">A'zolik</a> </li>
+                        <li><a href="#">Ochiq ma'lumotlar</a> </li>
+                    </ul>
+                    <ul>
+                        <h3>Yechimlar</h3>
+                        <li><a href="#">Ish o’rinlari</a> </li>
+                        <li><a href="#">Hamkorlar</a> </li>
+                        <li><a href="#">Bog’lanish</a> </li>
+                    </ul>
+                    <ul>
+                        <h3>Kompaniya</h3>
+                        <li><a href="#">Biz haqimizda</a> </li>
+                        <li><a href="#">Blog</a> </li>
+                        <li><a href="#">Litsenziya va sertifikat</a> </li>
+                        <li><a href="#"> A'Ommaviy oferta</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- <hr color="gray"> -->
+            <div class="bottom-footer">
+                <div>
+                    <p>© 2024 Texnopark, Inc.
+                        Terms
+                        Privacy Policy
+                        IT-Works</p>
+                </div>
+                <div class="logos">
+                    <a href="#"><img src="./img/tviter.svg" alt=""></a>
+                    <a href="#"><img src="./img/facebook-logo.svg" alt=""></a>
+                    <a href="https://linkedin.com/company/missanoati" target="_blank"><img src="./img/linkedin.svg.svg"
+                            alt=""></a>
+                    <a href="https://www.youtube.com/@Missanoati" target="_blank"><img src="./img/youtube-logo.svg"
+                            alt=""></a>
+                    <a href="#"><img src="./img/github-mark.svg.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<body>
+    <script src="./script.js"></script>
+</body>
+
+</html>

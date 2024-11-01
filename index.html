@@ -12,48 +12,67 @@
 
 <body>
     <div class="stars">
-        <header class="texnopark-container">
-            <div class="logo">
-                <img src="./img/Union.svg" alt="Texnopark Logo">
-                <p>Geologiya, metallurgiya va misni qayta ishlash sanoatini rivojlantirish loyiha ofisi</p>
-            </div>
+        <header>
+            <div class="stylesde texnopark-container">
 
-            <button class="burger-menu" style="color: white;" onclick="toggleMenu()">&#9776;</button>
-
-            <div id="nav-container" class="nav-container">
-                <p class="nav-container-p" onclick="CloseMenu()">&times;</p>
-                <nav class="nav-menu">
-                    <ul>
-                        <li><a href="#about">Biz haqimizda</a></li>
-                        <li><a href="#products">Faoliyat</a></li>
-                        <li><a href="#news">Yangiliklar</a></li>
-                        <li><a href="#contact">A'zolik</a></li>
-                        <li><a href="#contact">Ochiq ma'lumotlar</a></li>
-                        <li><a href="#contact">Bog'lanish</a></li>
-                    </ul>
-                </nav>
-
-                <div class="language">
-                    <button class="lang-btn-2">
-                        <img class="language-logo" src="./img/vector-increase.svg" alt="">USD | 12703.52 uzs
-                    </button>
-                    <button class="lang-btn">Kirish</button>
+                <div class="logo">
+                    <a href="./index.html"><img src="./img/Union.svg" alt="Texnopark Logo"></a>
+                    <a href="./index.html">
+                        <p>Geologiya, metallurgiya va misni qayta ishlash sanoatini rivojlantirish loyiha ofisi</p>
+                    </a>
                 </div>
-            </div>
+
+                <button class="burger-menu" style="color: white;" onclick="toggleMenu()">&#9776;</button>
+
+                <div id="nav-container" class="nav-container">
+                    <p class="nav-container-p" onclick="toggleMenu()">&times;</p>
+                    <nav class="nav-menu">
+                        <ul>
+                            <li><a href="#about">Biz haqimizda</a></li>
+                            <li><a href="#products">Faoliyat</a></li>
+                            <li><a href="./new.html">Yangiliklar</a></li>
+                            <li><a href="#contact">A'zolik</a></li>
+                            <li><a href="#contact">Ochiq ma'lumotlar</a></li>
+                            <li><a href="#contact">Bog'lanish</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="language">
+                        <button class="lang-btn-2">
+                            <img class="language-logo" src="./img/vector-increase.svg" alt="">USD | 12703.52 uzs
+                        </button>
+                        <button class="lang-btn" onclick="openModal()">Kirish</button>
+                    </div>
+                </div>
         </header>
 
-        <section class="main-section">
-            <div class="container">
-                <h1><span>Geologiya, metallurgiya</span> va <span>misni</span> qayta ishlash sanoatini rivojlantirish
-                    loyiha ofisi</h1>
-                <p>Biznesingizni jahon miqyosidagi nutq va sohaga mos til modellari bilan rivojlantiring. Oson
-                    integratsiya. Barcha biznes uchun mos. Dasturchilar uchun qulay.</p>
-                <div class="cta-buttons">
-                    <button class="btn primary">A’zolik tartibi</button>
-                    <button class="btn secondary">Texnopark a'zolari</button>
-                </div>
+        <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+        <div class="modal" id="loginModal">
+            <img src="./img/logos.svg" alt="Logo" style="width: 50px;">
+            <p>Geologiya, metallurgiya va misni qayta ishlash sanoatini rivojlantirish loyiha ofisi</p>
+            <label for="login">Login</label>
+            <input type="text" id="login" placeholder="Loginni kiriting"><br>
+            <label for="password">Parol</label>
+            <input type="password" id="password" placeholder="Parolni kiriting"><br>
+            <button class="close-btn" onclick="submitLogin()">Jo’natish</button>
+        </div>
+    </div>
+
+
+
+
+    <section class="main-section">
+        <div class="texnopark-container">
+            <h1><span>Geologiya, metallurgiya</span> va <span>misni</span> qayta ishlash sanoatini rivojlantirish
+                loyiha ofisi</h1>
+            <p>Biznesingizni jahon miqyosidagi nutq va sohaga mos til modellari bilan rivojlantiring. Oson
+                integratsiya. Barcha biznes uchun mos. Dasturchilar uchun qulay.</p>
+            <div class="cta-buttons">
+                <button class="btn primary">A’zolik tartibi</button>
+                <button class="btn secondary">Texnopark a'zolari</button>
             </div>
-        </section>
+        </div>
+    </section>
     </div>
 
 

@@ -1,7 +1,3 @@
-
-
-
-
 const toggleButtons = document.querySelectorAll('.toggle-answer');
 
 toggleButtons.forEach(button => {
@@ -49,12 +45,26 @@ toggleButtons.forEach(button => {
 function toggleMenu() {
     const navContainer = document.getElementById("nav-container");
     navContainer.classList.toggle("active");
+    document.body.style.overflow = 'hidden';
+
 }
 function CloseMenu() {
     const navContainer2 = document.getElementById("nav-container")
     navContainer2.classList.toggle("active")
+    document.body.style.overflow = 'auto';
+
 }
 
+
+window.addEventListener('scroll', function () {
+    const header = document.querySelector('.stylesde');
+
+    if (window.scrollY > 0) { // Проверяем, что страница прокручена вниз
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
 
 
 
@@ -99,3 +109,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+
+
+function openModal() {
+    document.getElementById('modalOverlay').style.display = 'block';
+    document.getElementById('loginModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    document.getElementById('modalOverlay').style.display = 'none';
+    document.getElementById('loginModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function submitLogin() {
+    alert("Данные отправлены!");
+    closeModal();
+}
+
+function toggleMenu() {
+    const navContainer = document.getElementById('nav-container');
+    navContainer.classList.toggle('active');
+}
